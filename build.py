@@ -267,6 +267,11 @@ def build_style(blurred: bool) -> dict:
         "variant": syn(P["magenta"]),
 
         "keyword": syn(P["green"]),
+        "keyword.import": syn(P["red"]),
+        "keyword.export": syn(P["red"]),
+        "keyword.directive": syn(P["red"]),
+        "keyword.directive.define": syn(P["red"]),
+        "module": syn(P["type_orange"]),
         "operator": syn(P["green"]),
         "tag": syn(P["green"]),
 

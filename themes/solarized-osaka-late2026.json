@@ -289,6 +289,31 @@
             "font_style": null,
             "font_weight": null
           },
+          "keyword.import": {
+            "color": "#ff6c6aff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.export": {
+            "color": "#ff6c6aff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.directive": {
+            "color": "#ff6c6aff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.directive.define": {
+            "color": "#ff6c6aff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "module": {
+            "color": "#B48802ff",
+            "font_style": null,
+            "font_weight": null
+          },
           "operator": {
             "color": "#a2bb00ff",
             "font_style": null,
@@ -740,6 +765,31 @@
           },
           "keyword": {
             "color": "#a2bb00ff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.import": {
+            "color": "#ff6c6aff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.export": {
+            "color": "#ff6c6aff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.directive": {
+            "color": "#ff6c6aff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.directive.define": {
+            "color": "#ff6c6aff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "module": {
+            "color": "#B48802ff",
             "font_style": null,
             "font_weight": null
           },

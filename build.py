@@ -6,6 +6,7 @@ import os
 
 PALETTE = {
     "base04": "#001419",
+    "base05": "#000d11",
     "base03": "#002c38",
     "base02": "#063540",
     "base01": "#7b99a2",
@@ -42,10 +43,10 @@ def build_style(blurred: bool) -> dict:
     surface_a = 0.69 if blurred else 1.0
     panel_a = 0.0 if blurred else 1.0
     editor_a = 0.0 if blurred else 1.0
-    window_a = 0.84 if blurred else 1.0
+    window_a = 0.78 if blurred else 1.0
     elem_a = 0.0 if blurred else 1.0
 
-    bg = P["base04"]
+    bg = P["base05"] if blurred else P["base04"]
     line = P["base03"]
     sel = P["base02"]
     fg = P["base0"]

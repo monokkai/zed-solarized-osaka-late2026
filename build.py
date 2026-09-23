@@ -58,8 +58,8 @@ def build_style(blurred: bool) -> dict:
     style = {
         "background.appearance": "blurred" if blurred else "opaque",
         "background": hexa(bg, window_a),
-        "border": hexa(P["base01"], 0.22 if blurred else 1.0),
-        "border.variant": hexa(P["base01"], 0.14 if blurred else 0.6),
+        "border": hexa(P["base01"], 0.14 if blurred else 1.0),
+        "border.variant": hexa(P["base01"], 0.09 if blurred else 0.6),
         "border.focused": hexa(P["blue"], 0.6),
         "border.selected": hexa(P["blue"], 0.8),
         "border.transparent": hexa(bg, 0.0),
@@ -93,8 +93,8 @@ def build_style(blurred: bool) -> dict:
         "ghost_element.disabled": hexa(line, 0.4),
 
         "panel.background": hexa(bg, panel_a),
-        "panel.focused_border": hexa(P["base01"], 0.22 if blurred else 0.6),
-        "pane.focused_border": hexa(P["base01"], 0.22 if blurred else 0.6),
+        "panel.focused_border": hexa(P["base01"], 0.14 if blurred else 0.6),
+        "pane.focused_border": hexa(P["base01"], 0.14 if blurred else 0.6),
         "status_bar.background": hexa(bg, window_a),
         "title_bar.background": hexa(bg, window_a),
         "title_bar.inactive_background": hexa(bg, window_a * 0.95),
@@ -178,7 +178,7 @@ def build_style(blurred: bool) -> dict:
         "version_control.conflict_marker.ours": hexa(P["green"], 0.2),
         "version_control.conflict_marker.theirs": hexa(P["blue"], 0.2),
 
-        "pane_group.border": hexa(P["base01"], 0.22 if blurred else 1.0),
+        "pane_group.border": hexa(P["base01"], 0.14 if blurred else 1.0),
         "editor.indent_guide": hexa(sel, 0.6),
         "editor.indent_guide_active": hexa(P["base01"], 0.8),
         "editor.debugger_active_line.background": hexa(P["orange"], 0.07),

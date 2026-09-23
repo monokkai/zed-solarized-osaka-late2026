@@ -20,7 +20,9 @@ PALETTE = {
     "green": "#a2bb00",
     "orange": "#fb724a",
     "yellow": "#dba500",
+    "type_orange": "#B48802",
     "red": "#ff6c6a",
+    "red_dark": "#c94a48",
     "magenta": "#fe67a8",
     "violet": "#9498ea",
     "gutter": "#664c00",
@@ -275,8 +277,8 @@ def build_style(blurred: bool) -> dict:
         "selector.pseudo": syn(P["blue"]),
         "label": syn(P["blue"]),
 
-        "type": syn(P["yellow"]),
-        "enum": syn(P["yellow"]),
+        "type": syn(P["type_orange"]),
+        "enum": syn(P["type_orange"]),
         "constructor": syn(P["red"]),
 
         "variable": syn(P["red"]),
@@ -284,9 +286,9 @@ def build_style(blurred: bool) -> dict:
         "variable.special": syn(P["violet"], "italic"),
         "namespace": syn(P["violet"]),
 
-        "punctuation": syn(P["red"]),
-        "punctuation.bracket": syn(P["red"]),
-        "punctuation.delimiter": syn(P["red"]),
+        "punctuation": syn(P["red_dark"]),
+        "punctuation.bracket": syn(P["red_dark"]),
+        "punctuation.delimiter": syn(P["red_dark"]),
         "punctuation.special": syn(P["orange"]),
         "punctuation.list_marker": syn(P["red"]),
         "punctuation.markup": syn(P["red"]),

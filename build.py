@@ -6,7 +6,7 @@ import os
 
 PALETTE = {
     "base04": "#001419",
-    "base05": "#000B10",
+    "base05": "#00070B",
     "base03": "#002c38",
     "base02": "#063540",
     "base01": "#7b99a2",
@@ -52,6 +52,9 @@ def build_style(blurred: bool) -> dict:
     fg = P["base0"]
     dim = P["base01"]
 
+    ui_text = "#c3c7c9"
+    ui_text_muted = "#8b9295"
+
     style = {
         "background.appearance": "blurred" if blurred else "opaque",
         "background": hexa(bg, window_a),
@@ -65,15 +68,15 @@ def build_style(blurred: bool) -> dict:
         "surface.background": hexa(bg, window_a),
         "drop_target.background": hexa(P["blue"], 0.2),
 
-        "text": hexa(fg),
-        "text.muted": hexa(dim),
+        "text": hexa(ui_text),
+        "text.muted": hexa(ui_text_muted),
         "text.placeholder": hexa(dim, 0.7),
         "text.disabled": hexa(dim, 0.5),
         "text.accent": hexa(P["orange"]),
         "link_text.hover": hexa(P["blue"]),
 
-        "icon": hexa(fg),
-        "icon.muted": hexa(dim),
+        "icon": hexa(ui_text),
+        "icon.muted": hexa(ui_text_muted),
         "icon.disabled": hexa(dim, 0.5),
         "icon.placeholder": hexa(dim, 0.7),
         "icon.accent": hexa(P["orange"]),

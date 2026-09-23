@@ -39,9 +39,10 @@ def syn(color: str, style=None, weight=None) -> dict:
 
 
 def build_style(blurred: bool) -> dict:
-    surface_a = 0.72 if blurred else 1.0
-    panel_a = 0.64 if blurred else 1.0
-    editor_a = 0.86 if blurred else 1.0
+    surface_a = 0.82 if blurred else 1.0
+    panel_a = 0.0 if blurred else 1.0
+    editor_a = 0.0 if blurred else 1.0
+    window_a = 0.84 if blurred else 1.0
 
     bg = P["base04"]
     line = P["base03"]
@@ -50,15 +51,15 @@ def build_style(blurred: bool) -> dict:
     dim = P["base01"]
 
     style = {
-        "background": hexa(bg, surface_a),
+        "background": hexa(bg, window_a),
         "border": hexa(sel),
         "border.variant": hexa(sel, 0.6),
         "border.focused": hexa(P["blue"], 0.6),
         "border.selected": hexa(P["blue"], 0.8),
         "border.transparent": hexa(bg, 0.0),
         "border.disabled": hexa(sel, 0.4),
-        "elevated_surface.background": hexa(line, surface_a),
-        "surface.background": hexa(bg, surface_a),
+        "elevated_surface.background": hexa(line, 1.0 if not blurred else 0.96),
+        "surface.background": hexa(bg, window_a),
         "drop_target.background": hexa(P["blue"], 0.2),
 
         "text": hexa(fg),
@@ -88,12 +89,12 @@ def build_style(blurred: bool) -> dict:
         "panel.background": hexa(bg, panel_a),
         "panel.focused_border": hexa(P["blue"], 0.6),
         "pane.focused_border": hexa(P["blue"], 0.6),
-        "status_bar.background": hexa(bg, panel_a),
-        "title_bar.background": hexa(bg, panel_a),
-        "title_bar.inactive_background": hexa(bg, panel_a * 0.9),
-        "toolbar.background": hexa(bg, surface_a),
+        "status_bar.background": hexa(bg, window_a),
+        "title_bar.background": hexa(bg, window_a),
+        "title_bar.inactive_background": hexa(bg, window_a * 0.95),
+        "toolbar.background": hexa(bg, panel_a),
         "tab_bar.background": hexa(bg, panel_a),
-        "tab.active_background": hexa(line, surface_a),
+        "tab.active_background": hexa(line, surface_a if blurred else 1.0),
         "tab.inactive_background": hexa(bg, panel_a),
 
         "scrollbar.track.background": hexa(bg, 0.0),
@@ -108,7 +109,7 @@ def build_style(blurred: bool) -> dict:
         "editor.line_number": hexa(P["gutter"]),
         "editor.active_line_number": hexa(P["orange"]),
         "editor.hover_line_number": hexa(P["orange"], 0.8),
-        "editor.active_line.background": hexa(line, 0.6),
+        "editor.active_line.background": hexa(line, 0.0 if blurred else 0.6),
         "editor.highlighted_line.background": hexa(line, 0.8),
         "editor.subheader.background": hexa(line, surface_a),
         "editor.invisible": hexa(sel),

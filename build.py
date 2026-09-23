@@ -279,14 +279,14 @@ def build_style(blurred: bool) -> dict:
         "enum": syn(P["yellow"]),
         "constructor": syn(P["red"]),
 
-        "variable": syn(fg),
+        "variable": syn(P["red"]),
         "variable.parameter": syn(P["orange"]),
         "variable.special": syn(P["violet"], "italic"),
         "namespace": syn(P["violet"]),
 
-        "punctuation": syn(P["bracket"]),
-        "punctuation.bracket": syn(P["bracket"]),
-        "punctuation.delimiter": syn(P["bracket"]),
+        "punctuation": syn(P["red"]),
+        "punctuation.bracket": syn(P["red"]),
+        "punctuation.delimiter": syn(P["red"]),
         "punctuation.special": syn(P["orange"]),
         "punctuation.list_marker": syn(P["red"]),
         "punctuation.markup": syn(P["red"]),

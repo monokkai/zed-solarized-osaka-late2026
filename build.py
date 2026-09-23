@@ -103,7 +103,7 @@ def build_style(blurred: bool) -> dict:
         "title_bar.inactive_background": hexa(bg, window_a * 0.95),
         "toolbar.background": hexa(bg, panel_a),
         "tab_bar.background": hexa(bg, panel_a),
-        "tab.active_background": hexa(line, surface_a),
+        "tab.active_background": hexa(P["base03"], 0.55 if blurred else 1.0),
         "tab.inactive_background": hexa(bg, panel_a),
 
         "scrollbar.track.background": hexa(bg, 0.0),
@@ -158,7 +158,7 @@ def build_style(blurred: bool) -> dict:
         "created": hexa(P["green"]),
         "created.background": hexa(P["green"], 0.12),
         "created.border": hexa(P["green"], 0.4),
-        "modified": hexa(P["yellow"]),
+        "modified": hexa(P["type_orange"]),
         "modified.background": hexa(P["yellow"], 0.12),
         "modified.border": hexa(P["yellow"], 0.4),
         "deleted": hexa(P["red"]),

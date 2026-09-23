@@ -64,7 +64,7 @@ def build_style(blurred: bool) -> dict:
         "border.selected": hexa(P["blue"], 0.8),
         "border.transparent": hexa(bg, 0.0),
         "border.disabled": hexa(sel, 0.4),
-        "elevated_surface.background": hexa(line, 1.0 if not blurred else 0.96),
+        "elevated_surface.background": hexa(bg, 1.0 if not blurred else 0.96),
         "surface.background": hexa(bg, window_a),
         "drop_target.background": hexa(P["blue"], 0.2),
 
@@ -86,7 +86,7 @@ def build_style(blurred: bool) -> dict:
         "element.active": hexa(sel, 0.0 if blurred else 1.0),
         "element.selected": hexa(sel, 0.3 if blurred else 1.0),
         "element.disabled": hexa(line, 0.5),
-        "ghost_element.background": hexa(line, 0.38 if blurred else 0.0),
+        "ghost_element.background": hexa(bg, 0.38 if blurred else 0.0),
         "ghost_element.hover": hexa(line, 0.56 if blurred else 0.5),
         "ghost_element.active": hexa(sel, 0.8),
         "ghost_element.selected": hexa(sel),

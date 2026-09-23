@@ -12,6 +12,7 @@ PALETTE = {
     "base01": "#7b99a2",
     "base00": "#85a1ac",
     "base0": "#b6c5c6",
+    "var_grey": "#9DABAC",
     "base1": "#c2cdcd",
     "base2": "#f4eeda",
     "base3": "#fff8e7",
@@ -286,7 +287,7 @@ def build_style(blurred: bool) -> dict:
         "enum": syn(P["type_orange"]),
         "constructor": syn(P["red"]),
 
-        "variable": syn(P["red"]),
+        "variable": syn(P["var_grey"]),
         "variable.parameter": syn(P["orange"]),
         "variable.special": syn(P["violet"], "italic"),
         "namespace": syn(P["violet"]),
